@@ -12,6 +12,8 @@ pipeline {
             steps {
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get install docker.io -y'
+                sh 'sudo systemctl start docker'
+                sh 'sudo systemctl enable docker'
                 sh 'sudo docker build -t task2 .'
                 sh 'sudo docker tag task2 parikshitt281/task2'
                 sh 'sudo docker push parikshitt281/task2'
