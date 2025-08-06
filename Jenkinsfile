@@ -18,7 +18,7 @@ pipeline {
                 sh 'sudo docker tag task2 parikshitt281/task2'
                 sh 'sudo docker push parikshitt281/task2'
                 sh 'sudo docker rm -f elevate || true'
-                sh 'sudo docker run -d -p 8080:80 --name elevate parikshitt281/task2'
+                sh 'sudo docker run -d -p  --name elevate parikshitt281/task2'
             }
         }
     }
